@@ -1,0 +1,15 @@
+.form-main {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-main h2 {
+    margin-bottom: 32;
+}
+
+.forms-main p{
+    max-width: 400px;
+    color:rgb(126, 126, 126);
+    padding-bottom: 16px;
+}

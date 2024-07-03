@@ -1,0 +1,22 @@
+.dropdownlist-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdownlist-main label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dropdownlist-main select {
+    width: 400px;
+    padding: 12px;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
