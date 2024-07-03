@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from './pages/RegisterPage/RegisterPage'
 import Header from './components/Header/Header'
 import Store from "./pages/Store/Store";
+import Footer from "./components/Footer/Footer";
 
 
 export default function AppRoutes () {
@@ -12,6 +13,7 @@ export default function AppRoutes () {
                     <Route path='/' element={<RegisterPage />}/>
                     <Route path='/loja' element={<Store />}/>
                 </Routes>
+            <Footer />
         </BrowserRouter>
     )
 }

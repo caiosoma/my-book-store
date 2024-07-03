@@ -5,14 +5,14 @@ const Header = () => {
     return (
         <header className="banner-main">
             <div>
-                <img src='../imgs/booklogo.png' alt='livrinho' width="68px" />
+                <img src='../imgs/livrin.png' alt='livrinho' width="68px" />
             </div>
             <nav>
                 <HeaderLink url='/'>
-                    Home
+                    Início
                 </HeaderLink>
                 <HeaderLink url='/loja'>
-                    Loja
+                    Catálogo
                 </HeaderLink>
                 <HeaderLink url='/conta'>
                     Minha Conta

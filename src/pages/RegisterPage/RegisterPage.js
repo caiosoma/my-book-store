@@ -1,9 +1,9 @@
-
+import Forms from "./components/Forms/Forms";
 
 export default function RegisterPage () {
     return (
-        <>
-            <h1>Kratos!</h1>
-        </>
+        <div>
+            <Forms />
+        </div>
     )
 }
