@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegisterPage from './pages/RegisterPage/RegisterPage'
 import Header from './components/Header/Header'
+import Store from "./pages/Store/Store";
 
 
 export default function AppRoutes () {
@@ -9,6 +10,7 @@ export default function AppRoutes () {
             <Header />
                 <Routes>
                     <Route path='/' element={<RegisterPage />}/>
+                    <Route path='/loja' element={<Store />}/>
                 </Routes>
         </BrowserRouter>
     )
