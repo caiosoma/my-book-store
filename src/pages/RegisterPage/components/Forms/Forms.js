@@ -12,9 +12,14 @@ export default function Forms () {
         'Drama'
     ]
 
+    function newBook (e) {
+        e.preventDefault()
+        console.log("kratos!")
+    }
+
     return (
         <section className='form-main'>
-            <form>
+            <form onSubmit={newBook}>
                 <h2>Cadastre um novo livro</h2>
                 <TextField 
                     label='Título do livro'
