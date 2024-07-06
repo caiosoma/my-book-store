@@ -1,20 +1,30 @@
+import { useState } from 'react'
 import Button from '../Button/Button'
 import DropdownList from '../DropdownList/DropdownList'
 import TextField from '../TextField/TextField'
 import './Forms.css'
 
-export default function Forms () {
+export default function Forms (props) {
+
+    const [book, setBook] = useState('')
+    const [autor, setAutor] = useState('')
+    const [genre, setGenre] = useState('')
 
     const genres = [
         'Terror',
         'Romance',
         'Ficção',
-        'Drama'
+        'Drama',
+        'Poesia'
     ]
 
     function newBook (e) {
         e.preventDefault()
-        console.log("kratos!")
+        props.newBookToSell({
+            Livro: book,
+            Autor: autor,
+            Gênero: genre,
+        })
     }
 
     return (
@@ -24,15 +34,21 @@ export default function Forms () {
                 <TextField 
                     label='Título do livro'
                     placeholder='digite o nome do livro..'
+                    value={book}
+                    dataCollected={setBook}
                 />
                 <TextField 
                     label='Nome do Autor'
                     placeholder='digite o nome do autor..'
+                    value={autor}
+                    dataCollected={setAutor}
                 />
                 <DropdownList 
                     label='Selecione o gênero'
                     placeholder='selecione...'
                     itens={genres}
+                    value={genre}
+                    dataCollected={setGenre}
                 />
                 <Button>
                     Cadastrar
