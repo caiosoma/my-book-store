@@ -32,18 +32,21 @@ export default function Forms (props) {
             <form onSubmit={newBook}>
                 <h2>Cadastre um novo livro</h2>
                 <TextField 
+                    required={true}
                     label='Título do livro'
                     placeholder='digite o nome do livro..'
                     value={book}
                     dataCollected={setBook}
                 />
                 <TextField 
+                    required={true}
                     label='Nome do Autor'
                     placeholder='digite o nome do autor..'
                     value={autor}
                     dataCollected={setAutor}
                 />
                 <DropdownList 
+                    required={true}
                     label='Selecione o gênero'
                     placeholder='selecione...'
                     itens={genres}
