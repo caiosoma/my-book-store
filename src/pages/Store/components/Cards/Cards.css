@@ -1,0 +1,17 @@
+.card-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.card-registered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 140px;
+    height: 160px;
+    border:  1px solid rgb(41, 41, 41);
+}
