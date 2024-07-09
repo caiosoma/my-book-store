@@ -3,8 +3,7 @@ import RegisterPage from './pages/RegisterPage/RegisterPage'
 import Header from './components/Header/Header'
 import Footer from "./components/Footer/Footer";
 import StorePage from "./pages/Store/StorePage";
-import Container from "./components/Container/Container";
-
+import AccountPage from "pages/AccountPage/AccountPage";
 
 export default function AppRoutes () {
     return (
@@ -13,6 +12,7 @@ export default function AppRoutes () {
                 <Routes>
                     <Route path='/' element={<RegisterPage />}/>
                     <Route path='/loja' element={<StorePage />}/>
+                    <Route path='/conta' element={<AccountPage />}/>
                 </Routes>
             <Footer />
         </BrowserRouter>

@@ -3,12 +3,39 @@ import Button from '../Button/Button'
 import DropdownList from '../DropdownList/DropdownList'
 import TextField from '../TextField/TextField'
 import './Forms.css'
+import ListApi from '../ListApi/ListApi'
 
 export default function Forms (props) {
 
     const [book, setBook] = useState('')
     const [autor, setAutor] = useState('')
     const [genre, setGenre] = useState('')
+
+    //Usestate do droplist adicional
+
+
+
+
+
+    const [categories, setCategories] = useState([])
+
+    fetch('http://localhost:5000/categories', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setCategories(data)
+        })
+        .catch((err) => console.log(err))
+
+
+
+
+
+
 
     const genres = [
         'Terror',
@@ -53,6 +80,13 @@ export default function Forms (props) {
                     value={genre}
                     dataCollected={setGenre}
                 />
+
+                <ListApi 
+                    name="category_id"
+                    text="selecione o genero"
+                    options={categories}
+                />
+
                 <Button>
                     Cadastrar
                 </Button>

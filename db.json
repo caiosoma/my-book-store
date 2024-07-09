@@ -1,0 +1,22 @@
+{
+    "books": [],
+    
+    "categories": [
+        {
+            "id": 1,
+            "genre": "Terror"
+        },
+        {
+            "id": 2,
+            "genre": "Ficção"
+        },
+        {
+            "id": 3,
+            "genre": "Romance"
+        },
+        {
+            "id": 4,
+            "genre": "Drama"
+        }
+    ]
+}
