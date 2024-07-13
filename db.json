@@ -16,7 +16,15 @@
         },
         {
             "id": 4,
+<<<<<<< HEAD
             "name": "Drama"
+=======
+            "genre": "Drama"
+        },
+        {
+            "id": 5,
+            "genre": "Poesia"
+>>>>>>> 943d65cd8239aa47ac35482097ae88106e6170a1
         }
     ]
 }

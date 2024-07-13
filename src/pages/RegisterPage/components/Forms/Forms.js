@@ -11,6 +11,7 @@ export default function Forms (props) {
     const [autor, setAutor] = useState('')
     const [genre, setGenre] = useState('')
 
+<<<<<<< HEAD
     
     
     
@@ -18,6 +19,13 @@ export default function Forms (props) {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {   
+=======
+
+    //Usestate do droplist adicional
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+>>>>>>> 943d65cd8239aa47ac35482097ae88106e6170a1
         fetch('http://localhost:5000/categories', {
             method: 'GET',
             headers: {
@@ -29,12 +37,16 @@ export default function Forms (props) {
                 setCategories(data)
             })
             .catch((err) => console.log(err))
+<<<<<<< HEAD
         }, [])
 
 
 
 
 
+=======
+    }, [])
+>>>>>>> 943d65cd8239aa47ac35482097ae88106e6170a1
 
 
     const genres = [
@@ -84,7 +96,7 @@ export default function Forms (props) {
 
                 <ListApi 
                     name="category_id"
-                    text="selecione o genero"
+                    text="selecione o gênero (API)"
                     options={categories}
                 />
 
