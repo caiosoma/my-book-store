@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from '../Button/Button'
 import DropdownList from '../DropdownList/DropdownList'
 import TextField from '../TextField/TextField'
@@ -11,25 +11,25 @@ export default function Forms (props) {
     const [autor, setAutor] = useState('')
     const [genre, setGenre] = useState('')
 
+    
+    
+    
     //Usestate do droplist adicional
-
-
-
-
-
     const [categories, setCategories] = useState([])
 
-    fetch('http://localhost:5000/categories', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-        .then((resp) => resp.json())
-        .then((data) => {
-            setCategories(data)
+    useEffect(() => {   
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
-        .catch((err) => console.log(err))
+            .then((resp) => resp.json())
+            .then((data) => {
+                setCategories(data)
+            })
+            .catch((err) => console.log(err))
+        }, [])
 
 
 
@@ -51,6 +51,7 @@ export default function Forms (props) {
             Livro: book,
             Autor: autor,
             Gênero: genre,
+            GêneroApi: categories.id
         })
     }
 

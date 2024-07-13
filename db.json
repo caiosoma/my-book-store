@@ -4,19 +4,19 @@
     "categories": [
         {
             "id": 1,
-            "genre": "Terror"
+            "name": "Terror"
         },
         {
             "id": 2,
-            "genre": "Ficção"
+            "name": "Ficção"
         },
         {
             "id": 3,
-            "genre": "Romance"
+            "name": "Romance"
         },
         {
             "id": 4,
-            "genre": "Drama"
+            "name": "Drama"
         }
     ]
 }
