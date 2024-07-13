@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Button from '../Button/Button'
 import DropdownList from '../DropdownList/DropdownList'
 import TextField from '../TextField/TextField'
@@ -11,30 +11,23 @@ export default function Forms (props) {
     const [autor, setAutor] = useState('')
     const [genre, setGenre] = useState('')
 
+
     //Usestate do droplist adicional
-
-
-
-
-
     const [categories, setCategories] = useState([])
 
-    fetch('http://localhost:5000/categories', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-        .then((resp) => resp.json())
-        .then((data) => {
-            setCategories(data)
+    useEffect(() => {
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
-        .catch((err) => console.log(err))
-
-
-
-
-
+            .then((resp) => resp.json())
+            .then((data) => {
+                setCategories(data)
+            })
+            .catch((err) => console.log(err))
+    }, [])
 
 
     const genres = [
@@ -83,7 +76,7 @@ export default function Forms (props) {
 
                 <ListApi 
                     name="category_id"
-                    text="selecione o genero"
+                    text="selecione o gênero (API)"
                     options={categories}
                 />
 

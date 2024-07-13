@@ -1,6 +1,6 @@
 import './ListApi.css'
 
-function ListApi (text, name, options, handleChange, value) {
+export default function ListApi ({text, name, options, handleChange, value}) {
     return (
         <div className='list-main'>
             <label htmlFor={name}>{text}</label>
@@ -14,5 +14,3 @@ function ListApi (text, name, options, handleChange, value) {
         </div>
     )
 }
-
-export default ListApi

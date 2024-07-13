@@ -17,6 +17,10 @@
         {
             "id": 4,
             "genre": "Drama"
+        },
+        {
+            "id": 5,
+            "genre": "Poesia"
         }
     ]
 }
